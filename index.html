@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Web Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Welcome to My Web Page</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#studies">What I Study</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#skills">TOP Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <figure>
+                <img src="bilder/foto.jpg" alt="Portrait of Anton Dushchak, web developer" width="200">
+                <figcaption>Anton Dushchak – Web Developer</figcaption>
+            </figure>
+            <p>Hello! I'm a web developer with a passion for creating interactive and user-friendly websites.</p>
+            <p>I enjoy learning new technologies and improving my skills.</p>
+        </section>
+
+        <section id="studies">
+            <h2>What I Study</h2>
+            <p>I am currently studying <em>computer science</em> and <em>web development</em>.</p>
+            <p>I focus on front-end technologies like <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, as well as back-end frameworks.</p>
+        </section>
+        
+        <section id="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Open Source Projects</li>
+                <li>UI/UX Design</li>
+                <li>Machine Learning</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>TOP Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                        <th>Experience (years)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Advanced</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Advanced</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Intermediate</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>Intermediate</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Node.js</td>
+                        <td>Beginner</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>My GitHub: <a href="https://github.com/anton-dushchak" target="_blank" rel="noopener noreferrer">https://github.com/anton-dushchak</a></p>
+            <p>You can reach me at <a href="mailto:anton.dushchak@gmail.com">anton.dushchak@gmail.com</a>.</p>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required>
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
