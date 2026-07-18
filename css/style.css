@@ -68,10 +68,7 @@ select {
 }
 
 .about-text {
-    max-width: 50%;
+    max-width: 30%;
     display: inline-block;
-}
-
-#about {
-    align-items: center;
+    vertical-align: center;
 }
