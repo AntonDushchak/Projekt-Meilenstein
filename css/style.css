@@ -1,10 +1,15 @@
 :root {
     --accent-color: #2563eb;
+    --accent-2: #1d4ed8;
     --background-color: #f5f0eb;
     --text-color: #2c2c2c;
+    --card-bg: #ffffff;
+    --muted: #64748b;
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
 }
 
 *,
@@ -15,14 +20,10 @@
 
 body {
     font-family: "Inter", Arial, sans-serif;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-}
-
-h1 {
-    color: var(--accent-color);
 }
 
 p {
@@ -35,19 +36,40 @@ a {
 }
 
 a:hover {
-    color: #1d4ed8;
+    color: var(--accent-2);
+}
+
+.about-me,
+.about-text {
+    max-width: 30%;
+    display: inline-block;
+}
+.about-text {
+    vertical-align: middle;
 }
 
 .form-group {
     margin-bottom: var(--space-md);
-    max-width: 30%;
     padding: var(--space-sm);
-    display: inline-block;
+    display: block;
+    max-width: 100%;
 }
 
 th,
 td {
     padding: var(--space-sm);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background: var(--accent-color);
+    color: #fff;
+    text-align: left;
+}
+td {
+    border-top: 0.0625rem solid rgba(15, 23, 42, 0.04);
 }
 
 input,
@@ -56,19 +78,114 @@ select {
     width: 100%;
     padding: var(--space-sm);
     margin-top: var(--space-xs);
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
+    border: 0.0625rem solid #cbd5e1;
+    border-radius: var(--radius-sm);
     background-color: #ffffff;
     color: var(--text-color);
 }
 
-.about-me {
-    max-width: 30%;
-    display: inline-block;
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent-2);
+    box-shadow: 0 0 0 0.1875rem rgba(37, 99, 235, 0.08);
 }
 
-.about-text {
-    max-width: 30%;
-    display: inline-block;
-    vertical-align: center;
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--accent-color);
+}
+.navbar h1 {
+    color: #ffffff;
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0 1rem;
+    padding: 0;
+    gap: 0.75rem;
+    align-items: center;
+}
+.nav-links a {
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+main section {
+    background: var(--card-bg);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.25rem 0.625rem rgba(15, 23, 42, 0.04);
+}
+main section h2 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+#about {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+}
+
+#contact {
+    padding: 1rem;
+}
+#contact h2 {
+    color: var(--accent-color);
+    margin: 0;
+}
+#contact .contact-info {
+    display: flex;
+    gap: 1rem;
+    padding-left: var(--space-sm);
+    color: var(--text-color);
+}
+#contact form {
+    flex: 2 1 26.25rem;
+    min-width: 18.75rem;
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.05), transparent 60%);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.375rem 1.125rem rgba(15, 23, 42, 0.06);
+}
+#contact form .form-group {
+    max-width: 100%;
+    display: block;
+}
+#contact p {
+    color: var(--muted);
+}
+
+button,
+#contact button {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+button:hover {
+    background: var(--accent-2);
+}
+
+footer {
+    padding: var(--space-sm);
+    text-align: center;
+    color: var(--muted);
 }
