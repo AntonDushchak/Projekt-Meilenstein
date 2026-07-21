@@ -39,11 +39,6 @@ a:hover {
     color: var(--accent-2);
 }
 
-.about-me,
-.about-text {
-    max-width: 30%;
-    display: inline-block;
-}
 .about-text {
     vertical-align: middle;
 }
@@ -159,6 +154,7 @@ main section h2 {
 }
 #contact .contact-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
     padding-left: var(--space-sm);
