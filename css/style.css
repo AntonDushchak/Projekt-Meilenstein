@@ -158,7 +158,8 @@ main section h2 {
 }
 #contact .contact-info {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
     padding-left: var(--space-sm);
     color: var(--text-color);
 }
