@@ -116,7 +116,7 @@ select:focus {
     background-color: var(--accent-color);
 }
 
-.navbar h1 {
+header h1 {
     color: #ffffff;
     margin: 0;
 }
@@ -222,7 +222,7 @@ footer {
         justify-content: flex-start;
     }
 
-    .navbar h1 {
+    header h1 {
         margin: 0 auto;
     }
 }
