@@ -4,7 +4,8 @@
     --background-color: #f5f0eb;
     --text-color: #2c2c2c;
     --card-bg: #ffffff;
-    --muted: #64748b;
+    /* darken muted color to meet contrast requirements */
+    --muted: #475569;
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -48,12 +49,16 @@ p {
 }
 
 a {
-    text-decoration: none;
     color: var(--accent-color);
+    /* provide non-color visual cue: underline for recognizability */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: auto;
 }
 
 a:hover {
     color: var(--accent-2);
+    text-decoration-thickness: 2px;
 }
 
 .form-group {
@@ -79,10 +84,11 @@ td {
     border-top: 0.0625rem solid rgba(15, 23, 42, 0.04);
 }
 tbody tr:nth-child(even) {
-    background: rgba(37, 99, 235, 0.05);
+    /* increase row background contrast slightly for readability */
+    background: rgba(37, 99, 235, 0.08);
 }
 tbody th {
-    background: rgba(37, 99, 235, 0.05);
+    background: rgba(37, 99, 235, 0.08);
     color: var(--text-color);
 }
 
@@ -246,8 +252,14 @@ select:focus {
 .nav-links a:focus-visible {
     background: rgba(255, 255, 255, 0.12);
     color: #fff;
+    outline: 2px solid rgba(255, 255, 255, 0.18);
+    outline-offset: 2px;
 }
 
+a:focus,
+a:focus-visible {
+    box-shadow: 0 0 0 0.1875rem rgba(37, 99, 235, 0.12);
+}
 @media (max-width: 600px) {
     .navbar {
         display: flex;
